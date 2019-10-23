@@ -1,0 +1,86 @@
+prevent name conflicts
+//function replacer(match, p1, p2, p3, offset, string) {
+// p1 is nondigits, p2 digits, and p3 non-alphanumerics
+//return [p1, p2, p3].join(' - ');
+//}
+//var newString = 'abc12345#$*%'.replace(/([^\d]*)(\d*)([^\w]*)/, replacer);
+//console.log(newString);  // abc - 12345 - #$*%
+string replace
+//var j$ = jQuery.noConflict();
+//j$('#test-id')
+//jQuery.noConflict();
+//(function( $ ) {
+//$(function() {
+//More code using $ as alias to jQuery
+//});
+//})(jQuery);               
+// Other code using $ as an alias to the other library
+//});                        
+
+<script src="dist/smooth-scrollbar.js"></script>
+
+<script>
+  var Scrollbar = window.Scrollbar;
+
+  Scrollbar.init(document.querySelector('#my-scrollbar'));
+</script>
+
+function get_elapsed_time_string(total_seconds) {
+    function pretty_time_string(num) {
+      return ( num < 10 ? "0" : "" ) + num;
+    }
+  
+    var hours = Math.floor(total_seconds / 3600);
+    total_seconds = total_seconds % 3600;
+  
+    var minutes = Math.floor(total_seconds / 60);
+    total_seconds = total_seconds % 60;
+  
+    var seconds = Math.floor(total_seconds);
+  
+    // Pad the minutes and seconds with leading zeros, if required
+    hours = pretty_time_string(hours);
+    minutes = pretty_time_string(minutes);
+    seconds = pretty_time_string(seconds);
+  
+    // Compose the string for display
+    var currentTimeString = hours + ":" + minutes + ":" + seconds;
+  
+    return currentTimeString;
+  }
+  
+  var elapsed_seconds = 0;
+  setInterval(function() {
+    elapsed_seconds = elapsed_seconds + 1;
+    $('#box_header').text(get_elapsed_time_string(elapsed_seconds));
+  }, 1000);
+
+  //var j$ = jQuery.noConflict();
+                        //j$('#test-id')
+                        //jQuery.noConflict();
+                        //(function( $ ) {
+                        //$(function() {
+                        // More code using $ as alias to jQuery
+                        //});
+                        //})(jQuery);               
+                        // Other code using $ as an alias to the other library
+
+                        $(window).scrollTop(0);
+
+                        window.scrollTo(0, document.body.scrollHeight);
+
+                        var t0 = performance.now();
+
+doSomething();   // <---- The function you're measuring time for 
+
+var t1 = performance.now();
+console.log("Call to doSomething took " + (t1 - t0) + " milliseconds.")
+
+<script>
+  var Scrollbar = window.Scrollbar;
+
+  Scrollbar.init(document.querySelector('#my-scrollbar'));
+</script>
+
+$("#toggle-profiling").text("Disable Profiling");
+                                 $("#toggle-profiling").text("Enable Profiling");
